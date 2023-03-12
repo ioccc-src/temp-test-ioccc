@@ -163,12 +163,13 @@ endif
 #
 ENTRY= ferguson2
 PROG= prog
+EXTRA_PROG= recode
 #
 OBJ= ${PROG}.o
 DATA= chocolate-cake.md enigma.1 input.txt obfuscation.key \
 	obfuscation.md obfuscation.txt recode.1 recode.md \
 	try.this.txt
-TARGET= ${PROG}
+TARGET= ${PROG} ${EXTRA_PROG}
 #
 ALT_OBJ=
 ALT_TARGET=
@@ -186,6 +187,9 @@ all: data ${TARGET}
 	supernova deep_magic magic charon pluto
 
 ${PROG}: ${PROG}.c
+	${CC} ${CFLAGS} $< -o $@ ${LIBS}
+
+${EXTRA_PROG}: ${EXTRA_PROG}.c
 	${CC} ${CFLAGS} $< -o $@ ${LIBS}
 
 # alternative executable

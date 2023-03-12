@@ -166,8 +166,8 @@ OBJ= ${PROG}.o
 DATA=
 TARGET= ${PROG}
 #
-ALT_OBJ=
-ALT_TARGET=
+ALT_OBJ= prog-simple.o
+ALT_TARGET= prog-simple
 
 
 #################
@@ -183,6 +183,7 @@ all: data ${TARGET}
 
 ${PROG}: ${PROG}.c
 	${CC} ${CFLAGS} $< -o $@ ${LIBS}
+	${LN} -sf ${PROG} weasel
 
 # alternative executable
 #

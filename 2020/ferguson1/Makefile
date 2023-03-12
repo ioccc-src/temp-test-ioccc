@@ -166,6 +166,7 @@ endif
 #
 ENTRY= ferguson1
 PROG= prog
+EXTRA_PROG= termcaps
 #
 OBJ= ${PROG}.o
 DATA= COMPILING.md HACKING.md bugs.html bugs.md cake.jpg cannibalism.log \
@@ -173,7 +174,7 @@ DATA= COMPILING.md HACKING.md bugs.html bugs.md cake.jpg cannibalism.log \
 	halfwidth_vs_fullwidth.png ioccc-cake.jpg play.sh prog.2.c prog.3-j.c \
 	prog.3.c snake-colours.sh snake.1 spoilers.html spoilers.md \
 	termcaps.c terminals.html terminals.md troubleshooting.html troubleshooting.md
-TARGET= ${PROG}
+TARGET= ${PROG} ${EXTRA_PROG} play snake-colours
 #
 ALT_OBJ= ${PROG}.alt.o
 ALT_TARGET= ${PROG}.alt
@@ -192,6 +193,23 @@ all: data ${TARGET}
 
 ${PROG}: ${PROG}.c
 	${CC} ${CFLAGS} $< -o $@ ${LIBS}
+
+# termcaps - test utility for terminal capabilities, size etc.
+${EXTRA_PROG}: ${EXTRA_PROG}.c
+	${CC} ${CFLAGS} $< -o $@ ${LIBS}
+
+
+# play - allows configuring colours and playing pre-configured gameplay modes
+#
+play:	play.sh
+	${CAT} $< > $@
+	${CHMOD} a+x $@
+
+# snake-colours - allows for configuring colours prior to compiling and playing
+#
+snake-colours: snake-colours.sh
+	${CAT} $< > $@
+	${CHMOD} a+x $@
 
 # alternative executable
 #

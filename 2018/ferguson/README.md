@@ -1,8 +1,10 @@
 # Best use of weasel words
 
-Cody Boone Ferguson <weasel@xexyl.net>  
-<https://ioccc.xexyl.net/2018/weasel>  
-Twitter: @xexyl  
+
+Cody Boone Ferguson <ioccc@xexyl.net>    
+<https://ioccc.xexyl.net>   
+<https://xexyl.net>  
+Mastodon: [@xexyl@fosstodon.org](https://fosstodon.org/@xexyl)    
 
 ## To build:
 
@@ -147,11 +149,11 @@ operative phrase is *given enough time*; but even if it's extremely unlikely
 monkey; I thought the monkey had it too easy: unlike his limited keyboard I have
 (besides space) every character in the ASCII range **`0<=126`** that
 **`isprint()`** returns non-zero except that only capital letters are included;
-the file *`prog-simple.c`* has a slightly smaller keyboard. There are some
-additional features I have added (including two Easter eggs); amongst others:
-ability to change the target string and maximum length. See 
-**[How it works](#how)**, **[Hints](#hints)** and **[How to build](#build)** for
-more details.
+the file *`prog-simple.c`* (try `make alt` to compile) has a slightly smaller
+keyboard. There are some additional features I have added (including two Easter
+eggs); amongst others: ability to change the target string and maximum length.
+See **[How it works](#how)**, **[Hints](#hints)** and **[How to build](#build)**
+for more details.
 
 In its simplest invocation this program will work its way (using a genetic
 algorithm) towards the solution of the string **`METHINKS IT IS LIKE A WEASEL`**
@@ -242,10 +244,10 @@ I was quite proud that when the next contest came the judges removed that
 question. Later 2018 and all of 2019 was difficult for me so it was like I won a
 second time for the same entry.
 
-### On user errors
+### On <del>user</del> monkey errors
 
 If the generation reaches **`SIZE_MAX - 1`** I consider it a
-user (or monkey) error; if the user insists on being so petulant enough as to try such
+<del>user</del> monkey error; if the user insists on being so petulant enough as to try such
 a ridiculous set of parameters in an attempt to make it be no more successful
 than a monkey typing *then it shouldn't be any more successful than a monkey; if
 it by chance reaches the target it's because a monkey could too!* Either way
@@ -259,8 +261,8 @@ this program is inspired by the Weasel program *which was inspired by the
 [Infinite Monkey Theorem][]* I opted instead to target the monkey Eric even if
 such a monkey isn't typing or even doesn't exist (because it's not the *Infinite
 Fish Theorem*). So although the user might not be a monkey the program makes the
-assumption that **the user could in fact be a monkey called Eric** *although it
-isn't insolent enough to say the user is a monkey for certain!*
+assumption that **the user could in fact be a monkey called Eric** _although it
+isn't insolent enough to say that the user **is** a monkey for certain!_
 
 [genetic algorithm]: https://web.archive.org/web/20180308131613/http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html
 [2018 guidelines]: http://ioccc.org/2018/guidelines.txt
@@ -311,7 +313,7 @@ This means don't print the generation and offspring output; only print (some) of
 the options set (this is always done but wouldn't usually be seen due to verbose
 output) and the final answer.
 
-**Change the mutation rate to `<rate>`:**
+**Change the mutation rate to `<num>`:**
 
 	    -r<num>
 
@@ -1136,7 +1138,8 @@ like to thank my mother for being the best mum anyone could ask for, who's
 always been here for me and whom I also inherit the keen analytical mind from. I
 love you all!
 
-I want to also thank Dave Burton for acknowledging me in his README.md file
+I want to also thank Dave Burton for acknowledging me in his
+[README.md](../burton2/README.md) file
 for as he put it 'being relentless with pursuit of bugs'. To think that it was
 circumstantial to my entry too makes it all the more unlikely but that doesn't
 take away the significance of it; for I am a very symbolic person and being

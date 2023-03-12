@@ -366,7 +366,7 @@ Thus:
 Coda
 ----
 
-Cody Ferguson was relentless in his pursuit of bugs.
+Cody Boone Ferguson was relentless in his pursuit of bugs.
 Thanks to his reports, the version of `unob.sh` is stronger,
 `tac` groks digraphs, `tokenfix` corrects for missing digraphs in `prog.c`,
 and the program `manpage` was added to the corpus.
