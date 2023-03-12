@@ -164,7 +164,7 @@ PROG= prog
 #
 OBJ= ${PROG}.o
 DATA=
-TARGET= ${PROG}
+TARGET= ${PROG} ${ALT_TARGET}
 #
 ALT_OBJ= prog-simple.o
 ALT_TARGET= prog-simple

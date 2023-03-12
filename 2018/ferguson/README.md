@@ -149,11 +149,11 @@ operative phrase is *given enough time*; but even if it's extremely unlikely
 monkey; I thought the monkey had it too easy: unlike his limited keyboard I have
 (besides space) every character in the ASCII range **`0<=126`** that
 **`isprint()`** returns non-zero except that only capital letters are included;
-the file *`prog-simple.c`* (try `make alt` to compile) has a slightly smaller
-keyboard. There are some additional features I have added (including two Easter
-eggs); amongst others: ability to change the target string and maximum length.
-See **[How it works](#how)**, **[Hints](#hints)** and **[How to build](#build)**
-for more details.
+the file *`prog-simple.c`* has a slightly smaller keyboard. There are some
+additional features I have added (including two Easter eggs); amongst others:
+ability to change the target string and maximum length.  See **[How it
+works](#how)**, **[Hints](#hints)** and **[How to build](#build)** for more
+details.
 
 In its simplest invocation this program will work its way (using a genetic
 algorithm) towards the solution of the string **`METHINKS IT IS LIKE A WEASEL`**
