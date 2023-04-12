@@ -58,6 +58,24 @@
 	    "winners.html_rank" : 40
 	},
 	{
+	    "filename" : "prog.2.c",
+	    "filetype" : "C",
+	    "created_by" : null,
+	    "winners.html_show" : true,
+	    "winners.html_display_via" : "GitHub",
+	    "winners.html_extra_text" : " - optional source file",
+	    "winners.html_rank" : 40
+	},
+	{
+	    "filename" : "recode.c",
+	    "filetype" : "C",
+	    "created_by" : null,
+	    "winners.html_show" : true,
+	    "winners.html_display_via" : "GitHub",
+	    "winners.html_extra_text" : " - supplementary source file",
+	    "winners.html_rank" : 40
+	},
+	{
 	    "filename" : "raw_data.file",
 	    "filetype" : "data",
 	    "created_by" : null,
