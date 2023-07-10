@@ -122,7 +122,7 @@ register).
 
 ### One more thing
 
-Note: the program writes a gzipped tarball to stdout.
+Note: the program writes a binary file to stdout.
 
     short main[]={5568,1,-30460,12,2782,0,-29921,2056,-4864,6873,770,30054,11886,
     24948,114,21716,-28851,14043,-8944,32691,-16187,-12247,22692,-9781,-20403,
