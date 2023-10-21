@@ -20,23 +20,7 @@ make all
 ./a.out 2>/dev/null
 ```
 
-The segfault which was always triggered was due to the code `*q>' '&&(*q)--;`.
-This seems odd at first glance but it's pointing to `s` which was read-only
-memory as a `char *s`.  It's now a `char s[]`.
-
-
-NOTE: for `clang` you'll likely have to use the alternate code described below.
-
-
 ## Try:
-
-With gcc, make and run as follows:
-
-```sh
-make dds
-```
-
-For example, the author suggests trying:
 
 ```sh
 ./dds LANDER.BAS 2>/dev/null
