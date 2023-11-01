@@ -101,7 +101,7 @@ endif
 
 
 ##############################
-# Special flags for this entry
+# Special variables for this entry
 ##############################
 #
 ENTRY= cdupont
