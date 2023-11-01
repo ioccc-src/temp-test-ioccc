@@ -105,7 +105,7 @@ endif
 
 
 ##############################
-# Special variables for this entry
+# Special Makefile variables for this entry
 ##############################
 #
 ENTRY= bmeyer
