@@ -1,0 +1,76 @@
+## To build:
+
+```sh
+make
+```
+
+
+## To use:
+
+```sh
+./prog
+```
+
+
+### Try:
+
+```sh
+# first input to try
+echo first input to try | ./prog
+
+# try reading this output
+echo International Obfuscated C Code Contest | ./prog
+
+# try reading this other output
+./prog < input.txt
+```
+
+
+## Alternate code:
+
+There is an alternate version of this code in `prog.alt.c` where the main code is a macro.
+
+To compile this alternate version:
+
+```sh
+make alt
+```
+
+Use `prog.alt` as you would `prog` above.
+
+
+## Judges' remarks:
+
+It is interesting how well smeonoe can raed txet wtih lots of tyops in it.
+How well can you raed porg.c, C prgoarm that is in the shpae of an SD card (or
+is it a pnuch crad)?
+
+BTW: this funny reading of English (which also works with several other
+languages) is called
+[typoglycemia](https://www.mrc-cbu.cam.ac.uk/personal/matt.davis/Cmabrigde/)
+(the article however is incorrect in stating that if the letters were more
+jumbled or if other words were formed one could not read it: we know of some who
+can in fact do exactly that).
+
+
+## Author's remarks:
+
+### Letter Mixer ###
+
+Compile and try this:
+
+```sh
+cat input.txt | ./prog
+```
+
+The program can work with letters that are not represented in English, as long as these letters are encoded in the higher part of the single-byte character set (use `iconv` to convert from UTF-8 and back).
+
+
+## Copyright and CC BY-SA 4.0 License:
+
+This file is Copyright (c) 2023 by Landon Curt Noll.  All Rights Reserved.
+You are free to share and adapt this file under the terms of this license:
+
+    Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+For more information, see: https://creativecommons.org/licenses/by-sa/4.0/

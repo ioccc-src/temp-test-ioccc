@@ -1,27 +1,21 @@
 ## 2020 marked the "The Twenty Seventh International Obfuscated C Code Contest"
 
-Copyright (C) 2020, Landon Curt Noll, Simon Cooper, and Leonid A.
-Broukhis. All Rights Reserved. Permission for personal, educational
-or non-profit use is granted provided this copyright and notice are
-included in its entirety and remains unaltered.  All other uses
-must receive prior permission from the contest judges.
-
 
 ## Standard IOCCC stuff
 
+Look at the README.md file for the given winning entry for information
+on how to compile it and how to run the winning program.
+Look at the winning source and try to figure how it does what it does!
+You may then wish to look at the Author's remarks for even more details.
+
 The primary IOCCC web site can be found at,
 
->	<http://www.ioccc.org/>
+>	<https://www.ioccc.org/>
 
-Use make to compile entries.  It is possible that on non-Un\*x / non-Linux
-systems the makefile needs to be changed.  See the Makefile for details.
+Use `make` to compile entries.  It is possible that on non-Unix / non-Linux
+systems the Makefile needs to be changed.  See the Makefile for details.
 
-Look at the source and try to figure out what the programs do, and run
-them with various inputs.  If you want to, look at the hints files for
-spoilers - this year we included most of the information included
-by the submitter.
-
-Read over the makefile for compile/build issues.  Your system may require
+Read over the Makefile for compile/build issues.  Your system may require
 certain changes (add or remove a library, add or remove a #define).
 
 Some C compilers are not quite as good as they should be.  If yours is
@@ -52,7 +46,7 @@ A few entries were violating the "2053 significant bytes" rule. If an entry coul
 compliance within a few seconds of looking at the source, it was disqualified.
 
 One entry tried to get around the size limit by putting the code into
-makefile variables and using -D. This is already called out as discouraged
+Makefile variables and using -D. This is already called out as discouraged
 technique in the guidelines, but it is worth a reminder.
 
 Several promising entries attempted to make use of the `syscall` function using literal syscall numbers.
@@ -82,16 +76,16 @@ send us the fix (patch file or the entire changed file).
 
 For the latest information on how to contact the IOCCC Judges please visit
 
->	<http://www.ioccc.org/contact.html>
+>	<https://www.ioccc.org/contact.html>
 
 For news of the next contest watch:
 
->	<http://www.ioccc.org/>
+>	<https://www.ioccc.org/>
 
------------------------------------------------------------------------------------------------------
-(c) Copyright 1984-2020, [Leo Broukhis, Simon Cooper, Landon Curt Noll][judges] - All rights reserved
-This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License][cc].
+=-=
 
-[judges]: http://www.ioccc.org/judges.html
-[cc]: http://creativecommons.org/licenses/by-sa/3.0/
------------------------------------------------------------------------------------------------------
+Copyright (C) 2020, Landon Curt Noll, Simon Cooper, and Leonid A.
+Broukhis. All Rights Reserved. Permission for personal, educational
+or non-profit use is granted provided this copyright and notice are
+included in its entirety and remains unaltered.  All other uses
+must receive prior permission from the contest judges.

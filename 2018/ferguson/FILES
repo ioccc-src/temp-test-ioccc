@@ -5,8 +5,8 @@ prog.c			    This is the source file to the `weasel'
 			    program [1].
 
 
-prog-simple.c		    This is the source code file to the
-			    `weasel-simple' program [1].
+prog.alt.c		    This is the source code file to the
+			    `weasel.alt' program [1].
 
 
 test.sh			    Script provided to test the weasel program [1].
@@ -40,9 +40,7 @@ weasel.1		    The system wide version of the man page for when
 
 
 
-hint.text		    The source of the hint.html file [3].
-hint.txt		    'hint.txt' is a possible name in the future
-			    according to the judges.
+README.md		    The source of the index.html file [3].
 
 
 hint.html		    More thorough documentation including example
@@ -54,7 +52,7 @@ hint.html		    More thorough documentation including example
 hint.css		    The CSS file for the hint.html file [3].
 
 
-rpm.markdown		    This file briefly answers 'why' I submitted a rpm
+rpm.md		    This file briefly answers 'why' I submitted a rpm
 			    spec file 'weasel.spec' as well as the possibility
 			    of building the RPM for others (despite the fact I
 			    am confident that I'm the only one who would make
@@ -81,8 +79,8 @@ the spec file. Please note that the paths below are dependent on the prefix
 used in installation; where I suggest '/usr' it is equally possible it could be
 under '/usr/local', for example.
 
-[1]			    Note that 'prog.c' and 'prog-simple.c' would be
-			    linked to 'weasel.c' and 'weasel-simple.c'
+[1]			    Note that 'prog.c' and 'prog.alt.c' would be
+			    linked to 'weasel.c' and 'weasel.alt.c'
 			    (respectively) in the '/usr/src/weasel'
 			    subdirectory.
 

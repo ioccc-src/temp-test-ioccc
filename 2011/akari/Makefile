@@ -1,136 +1,259 @@
 #!/usr/bin/env make
 #
-# 2011 makefile
+# IOCCC 2011 winning entry - akari
+
+################################################################################
 #
-# This work by Landon Curt Noll, Simon Cooper, and Leonid A. Broukhis
-# is licensed under:
+# IOCCC winning entry code may not work on your system.  What was liked/allowed
+# and worked in the past may no longer be liked/allowed or compile/run today.
 #
-#	Creative Commons Attribution-ShareAlike 3.0 Unported License.
+# Bug fixes, corrections and typo fixes are VERY WELCOME.  If you see a problem,
+# first check this URL for a list of known bugs and (mis)features of IOCCC winners:
 #
-# See: http://creativecommons.org/licenses/by-sa/3.0/
+#	https://www.ioccc.org/bugs.md
+#
+# GitHub pull requests are welcome!  Please see the above URL for details.
+#
+################################################################################
+#
+# This file is Copyright (c) 2023 by Landon Curt Noll.  All Rights Reserved.
+# You are free to share and adapt this file under the terms of this license:
+#
+#	Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+#
+# For more information, see: https://creativecommons.org/licenses/by-sa/4.0/
 
 
-################
-# tool locations
-################
+#############################
+# shell used by this Makefile
+#############################
 #
-SHELL= /bin/bash
-CP= cp
-CPP= cpp
-GUNZIP= gunzip
-LD= ld
-MAKE= make
-RM= rm
-SED= sed
-TAR= tar
-TRUE= true
+SHELL= bash
 
-# Compiler warnings
+#######################
+# common tool locations
+#######################
 #
-CWARN= -Wall -W -pedantic
+include ../../var.mk
 
-# compiler standard
+# Common C compiler warnings to silence
 #
-CSTD= -std=c99
-CSTD2= -ansi
+CSILENCE= -Wno-empty-body -Wno-error -Wno-implicit-function-declaration \
+	-Wno-implicit-int -Wno-return-type -Wno-unused-parameter \
+	-Wno-deprecated-non-prototype
 
-# compiler bit architecture
+# Common C compiler warning flags
 #
-# Some entries require 32-bitness,
-# other entries require 64-bitess.
-# By default we assume nothing.
+CWARN= -Wall -Wextra ${CSILENCE}
+
+# Compiler standard
+#
+CSTD= -std=gnu99
+
+# Compiler bit architecture
+#
+# Some entries require 32-bitness: ARCH= -m32
+# Some entries require 64-bitness: ARCH= -m64
 #
 ARCH=
 
-# optimization
+# Defines that are needed to compile
 #
-# Most compiles will safely use -O2.  Some can use only -O1 or -O.
-# A few compilers have broken optimizers or this entry make break
-# under those buggy optimizers and thus you may not want anything.
-#
-OPT= -O2
+CDEFINE=
 
-# default flags for ANSI C compilation
+# Include files that are needed to compile
 #
-CFLAGS= ${CWARN} ${CSTD} ${ARCH} ${OPT}
-CFLAGS2= ${CSTD2} ${ARCH} ${OPT}
+CINCLUDE=
 
-# ANSI compiler
+# Optimization
 #
-# Set CC to the name of your ANSI compiler.
+OPT= -O3
+
+# Default flags for ANSI C compilation
+#
+CFLAGS= ${CSTD} ${CWARN} ${ARCH} ${CDEFINE} ${CINCLUDE} ${OPT}
+
+# Libraries needed to build
+#
+LDFLAGS=
+
+# C compiler to use
 #
 CC= cc
 
+# Compiler add-ons or replacements for clang only
+#
+ifeq "$(findstring $(CLANG),${CC})" "$(CLANG)"
+#
+CSILENCE+= -Wno-conditional-uninitialized -Wno-error \
+	-Wno-implicit-function-declaration -Wno-format-nonliteral \
+	-Wno-implicit-int -Wno-missing-prototypes \
+	-Wno-missing-variable-declarations -Wno-poison-system-directories \
+	-Wno-redundant-parens -Wno-return-type -Wno-shadow -Wno-shorten-64-to-32 \
+	-Wno-strict-prototypes -Wno-pedantic
+#
+CWARN+= -Weverything
+#
+endif
+
+# Specific add-ons or replacements for gcc only
+#
+ifeq "$(findstring $(GCC),${CC})" "$(GCC)"
+#
+#CSILENCE+=
+#
+#CWARN+=
+#
+endif
+
 
 ##############################
-# Special flags for this entry
+# Special Makefile variables for this entry
 ##############################
 #
 ENTRY= akari
+PROG= ${ENTRY}
+#
+OBJ= ${PROG}.o
 DATA= example.ppm
+TARGET= ${PROG} ${PROG}2 ${PROG}3 ${PROG}4
+#
+ALT_OBJ=
+ALT_TARGET=
 
 
 #################
 # build the entry
 #################
 #
-all: ${ENTRY} ${DATA}
+all: data ${TARGET}
 	@${TRUE}
 
-everything: ${ENTRY} \
-	    ${ENTRY}2.c ${ENTRY}2 \
-	    ${ENTRY}3.c ${ENTRY}3 \
-	    ${ENTRY}4.c ${ENTRY}4
-	@${TRUE}
+.PHONY: all alt data everything diff_orig_prog diff_prog_orig \
+	diff_alt_prog diff_prog_alt diff_orig_alt diff_alt_orig \
+	clean clobber install love haste waste maker easter_egg \
+	sandwich supernova deep_magic magic charon pluto
 
-${ENTRY}: ${ENTRY}.c
-	${CC} ${CFLAGS} ${ENTRY}.c -o ${ENTRY}
+${PROG}: ${PROG}.c
+	${CC} ${CFLAGS} $< -o $@ ${LDFLAGS}
 
-${ENTRY}2.c: ${ENTRY}
-	./${ENTRY} ${ENTRY}.c $@
+${PROG}2.c: ${PROG}
+	./${PROG} ${PROG}.c $@
 
-${ENTRY}2: ${ENTRY}2.c
-	${CC} ${CFLAGS} ${ENTRY}2.c -o $@
+${PROG}2: ${PROG}2.c
+	${CC} ${CFLAGS} $< -o $@ ${LDFLAGS}
 
-${ENTRY}3.c: ${ENTRY} ${ENTRY}.c
-	./${ENTRY} < ${ENTRY}.c | ./${ENTRY} > $@
+${PROG}3.c: ${PROG} ${PROG}.c
+	./${PROG} < ${PROG}.c | ./${PROG} > $@
 
-${ENTRY}3: ${ENTRY}3.c
-	${CC} ${CFLAGS2} ${ENTRY}3.c -o $@
+${PROG}3: ${PROG}3.c
+	${CC} ${CFLAGS} $< -o $@ ${LDFLAGS}
 
-${ENTRY}4.c: ${ENTRY} ${ENTRY}.c
-	./${ENTRY} < ${ENTRY}.c | ./${ENTRY} | ./${ENTRY} > $@
+${PROG}4.c: ${PROG} ${PROG}.c
+	./${PROG} < ${PROG}.c | ./${PROG} | ./${PROG} > $@
 
-${ENTRY}4: ${ENTRY}4.c
-	${CC} ${CFLAGS2} ${ENTRY}4.c -o $@
+${PROG}4: ${PROG}4.c
+	${CC} ${CFLAGS} $< -o $@ ${LDFLAGS}
 
 # alternative executable
 #
-alt:
+alt: data ${ALT_TARGET}
 	@${TRUE}
+
+# data files
+#
+data: ${DATA}
+	@${TRUE}
+
+# both all and alt
+#
+everything: all alt
+	@${TRUE}
+
+
+#####################
+# make a difference #
+#####################
+#
+# diff orig source and source
+#
+diff_orig_prog: ${PROG}.orig.c ${PROG}.c
+	@-${DIFF} -u ${PROG}.orig.c ${PROG}.c
+
+# diff source and orig source
+#
+diff_prog_orig: ${PROG}.c ${PROG}.orig.c
+	@-${DIFF} -u ${PROG}.c ${PROG}.orig.c
+
+# diff alt source and source
+#
+diff_alt_prog: ${PROG}.c
+	@-if [[ -e ${PROG}.alt.c ]]; then \
+	    ${DIFF} -u ${PROG}.alt.c ${PROG}.c; \
+	fi
+
+# diff source and alt source
+#
+diff_prog_alt: ${PROG}.c
+	@-if [[ -e ${PROG}.alt.c ]]; then \
+	    ${DIFF} -u ${PROG}.c ${PROG}.alt.c; \
+	fi
+
+# diff orig and alt
+#
+diff_orig_alt: ${PROG}.orig.c
+	@-if [[ -e ${PROG}.alt.c ]]; then \
+	    ${DIFF} -u ${PROG}.orig.c ${PROG}.alt.c; \
+	fi
+
+diff_alt_orig:
+	@-if [[ -e ${PROG}.alt.c ]]; then \
+	    ${DIFF} -u ${PROG}.alt.c ${PROG}.orig.c; \
+	fi
 
 
 ###############
 # utility rules
 ###############
 #
-everything: all alt
-
 clean:
-	${RM} -f ${ENTRY}.o ${ENTRY}2.c ${ENTRY}3.c ${ENTRY}4.c
+	${RM} -f ${OBJ} ${ALT_OBJ}
+	@-if [ -f indent.c ]; then \
+	    echo ${RM} -f indent.c; \
+	    ${RM} -f indent.c; \
+	fi
 
 clobber: clean
-	${RM} -f ${ENTRY} ${ENTRY}2 ${ENTRY}3 ${ENTRY}4
-
-nuke: clobber
-	@echo gnab gib!
+	${RM} -f ${TARGET} ${ALT_TARGET}
+	${RM} -rf *.dSYM
+	${RM} -f akari2.c akari3.c akari4.c
+	@-if [ -e sandwich ]; then \
+	    ${RM} -f sandwich; \
+	    echo 'ate sandwich'; \
+	fi
 
 install:
-	@echo "Surely you're joking Mr. Feynman!"
+	@echo "Dr. Spock says that is not logical!"
+	@${TRUE}
 
-# backwards compatibility
+# you may be able to misunderstand the source by reading indent.c
 #
-build: all
+indent.c: ${PROG}.c
+	@if which "${GINDENT}" >/dev/null 2>&1; then \
+	    echo ${RM} -f $@; \
+	    ${RM} -f $@; \
+	    echo "${GINDENT} < $< > $@"; \
+	    ${GINDENT} < $< > $@; \
+	elif which "${INDENT}" >/dev/null 2>&1; then \
+	    echo ${RM} -f $@; \
+	    ${RM} -f $@; \
+	    echo "${INDENT} < $< > $@"; \
+	    ${INDENT} < $< > $@; \
+	else \
+	    echo "no indent tool found, ident $< yourself, sorry"; \
+	    echo "exit 17"; \
+	    exit 17; \
+	fi
 
 
 ##################
@@ -140,14 +263,72 @@ build: all
 love:
 	@echo 'not war?'
 
-haste:
-	$(MAKE) waste
-
 waste:
-	@echo 'waste'
+	@echo $@
 
-easter_egg:
-	@echo you expected to mis-understand this $${RANDOM} magic
-	@echo chongo '<was here>' "/\\oo/\\"
-	@echo Readers shall not be disallowed from being unable to partly misunderstand this final echo.
-	@${TRUE}
+haste:
+	${MAKE} waste
+
+maker: haste
+	@echo 'Participate in a maker faire'
+	${MAKE} love
+
+easter_egg: maker
+	@echo "You are expected to often misunderstand this $${RANDOM} magic, Eggy!"
+	@echo "chongo '<was here>' /\\oo/\\"
+	@echo "p.s.: Careful with That Axe, Eugene!"
+
+sandwich: easter_egg
+	@if [ `id -u` -eq 0 ]; then \
+	    echo 'Okay.'; \
+	    echo "$${RANDOM}`date +%s`$${RANDOM}" > $@; \
+	else \
+	    echo 'What? Make it yourself.'; \
+	    echo "Did you forget the magic word?"; \
+	fi
+
+# Understand the history of the Homebrew Computer Club
+# as well as the West Coast Computer Faire and
+# you might be confused different.  :-)
+#
+supernova: sandwich
+	@-if [ -r .code_anal ]; then \
+	    ${RM} -f .code_anal_v6; \
+	else \
+	    echo "Planet deniers, like some members of the IAU, are so cute when they try to defend their logic"; \
+	fi
+	@echo "A $@ helps ${MAKE} the elements that help form planets"
+
+deep_magic: supernova
+	@-if [ -r .code_anal ]; then \
+	    ccode_analysis --deep_magic 7889066cdbdf09b0408021754586e895be641cc9be29e7eafd3ca65359541f17 \
+			   --FNV1a_hash_512_bit -v2 "${PROG}" "${PROG}.c"; \
+	else \
+	    echo "Wrong! Do it again!"; \
+	    sleep 1; \
+	    echo "Wrong! Do it again!"; \
+	    sleep 1; \
+	    echo "Wrong! Do it again!"; \
+	fi
+
+magic: deep_magic
+	@-if [ -r .code_anal ]; then \
+	    ccode_analysis --level 20003 --mode 5717175 --FNV1a_hash_512_bit -v2 "${PROG}" "${PROG}.c"; \
+	else \
+	    echo "If you don't eat yer meat, you can't have any pudding!"; \
+	    echo "How can you have any pudding if you don't eat yer meat?!"; \
+	fi
+
+# The IOCCC resident astronomer states
+#
+charon: magic
+	@echo "$@ is a dwarf planet"
+	@echo "Dwarf planets are a type of planet"
+	@echo "Therefore IAU, $@ is a planet"
+
+pluto: charon
+	@echo "See https://www.hou.usra.edu/meetings/lpsc2017/pdf/1448.pdf for a good definition of a planet"
+	@echo "$@ is a dwarf planet"
+	@echo "Dwarf planets are a type of planet"
+	@echo "Therefore, $@ is a planet"
+	@echo "The geophysical definition of planet gives us ~110 planets in our solar system"

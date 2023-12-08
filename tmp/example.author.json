@@ -1,0 +1,22 @@
+{
+    "no_comment" : "mandatory comment: because comments were removed from the original JSON spec",
+    "author_JSON_format_version" : "1.0 2023-06-10",
+    "author_handle" : "first0_last0",
+    "full_name" : "First Middle Last",
+    "sort_word" : "lowercaselast",
+    "location_code" : "AU",
+    "location_name" : "Australia",
+    "email" : "user0@example.com",
+    "url" : "https:\/\/a.host0.example.com\/index.html",
+    "alt_url" : "https:\/\/b.host0.example.com\/index.html",
+    "deprecated_twitter_handle" : "@something",
+    "mastodon" : "@mastodon0@example.com",
+    "mastodon_url" : "https:\/\/example.org\/@mastodon0",
+    "github" : "@github0",
+    "affiliation" : "an affiliation group",
+    "winning_entry_set" : [
+	{ "winner_id" : "1987_somedir" },
+	{ "winner_id" : "2020_entrydir" },
+	{ "winner_id" : "2024_dirname" }
+    ]
+}

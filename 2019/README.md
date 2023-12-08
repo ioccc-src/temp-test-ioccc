@@ -1,29 +1,23 @@
 2016 marked the "The Twenty Sixth International Obfuscated C Code Contest"
 ==========================================================================
 
-Copyright (C) 2019, Landon Curt Noll, Simon Cooper, and Leonid A.
-Broukhis. All Rights Reserved. Permission for personal, educational
-or non-profit use is granted provided this copyright and notice are
-included in its entirety and remains unaltered.  All other uses
-must receive prior permission from the contest judges.
-
 
 Standard IOCCC stuff
 --------------------
 
+Look at the README.md file for the given winning entry for information
+on how to compile it and how to run the winning program.
+Look at the winning source and try to figure how it does what it does!
+You may then wish to look at the Author's remarks for even more details.
+
 The primary IOCCC web site can be found at,
 
->	<http://www.ioccc.org/>
+>	<https://www.ioccc.org/>
 
-Use make to compile entries.  It is possible that on non-Un\*x / non-Linux
-systems the makefile needs to be changed.  See the Makefile for details.
+Use `make` to compile entries.  It is possible that on non-Unix / non-Linux
+systems the Makefile needs to be changed.  See the Makefile for details.
 
-Look at the source and try to figure out what the programs do, and run
-them with various inputs.  If you want to, look at the hints files for
-spoilers - this year we included most of the information included
-by the submitter.
-
-Read over the makefile for compile/build issues.  Your system may require
+Read over the Makefile for compile/build issues.  Your system may require
 certain changes (add or remove a library, add or remove a #define).
 
 Some C compilers are not quite as good as they should be.  If yours is
@@ -42,8 +36,8 @@ The "Most likely to be awarded" (ciura) has an amazing vocabulary!
 
 There are again nods to winners of the years:
 
-	[1991/davidguy](http://ioccc.org/years-spoiler.html#1991_davidguy)
-	[2011/blakely](http://ioccc.org/years-spoiler.html#2011_blakely)
+	[1991/davidguy](http://ioccc.org/years.html#1991_davidguy)
+	[2011/blakely](http://ioccc.org/years.html#2011_blakely)
 
 These nods to not run afoul of the guideline:
 
@@ -64,7 +58,7 @@ Some entries tried to get around the size limit by submitting a data
 file that was really C code and then blindly including code in prog.c.
 
 Quite a few entries suffered from undefined behavior like accessing
-uninitialized locals and/or reading-writing below the stack. 
+uninitialized locals and/or reading-writing below the stack.
 We advise running your entry through valgrind to make sure those mistakes
 are avoided.
 
@@ -93,17 +87,16 @@ send us the fix (patch file or the entire changed file).
 
 For the latest information on how to contact the IOCCC Judges please visit
 
->	<http://www.ioccc.org/contact.html>
+>	<https://www.ioccc.org/contact.html>
 
 For news of the next contest watch:
 
->	<http://www.ioccc.org/>
+>	<https://www.ioccc.org/>
 
---------------------------------------------------------------------------------
-<!--
-(c) Copyright 1984-2019, [Leo Broukhis, Simon Cooper, Landon Curt Noll][judges] - All rights reserved
-This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License][cc].
+=-=
 
-[judges]: http://www.ioccc.org/judges.html
-[cc]: http://creativecommons.org/licenses/by-sa/3.0/
--->
+Copyright (C) 2019, Landon Curt Noll, Simon Cooper, and Leonid A.
+Broukhis. All Rights Reserved. Permission for personal, educational
+or non-profit use is granted provided this copyright and notice are
+included in its entirety and remains unaltered.  All other uses
+must receive prior permission from the contest judges.
