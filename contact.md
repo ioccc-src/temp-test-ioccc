@@ -2,9 +2,9 @@
 
 If you are trying to:
 
-* Fix a winning IOCCC entry - (see [FAQ 5.2](faq.html#fix_an_entry))
-* Update winning author information - (see [FAQ 5.5](faq.html#fix_author))
-* Correct a web site problem - (see [FAQ 5.4](faq.html#fix_web_site) or [FAQ 5.6](faq.html#fix_link))
+* Fix a winning IOCCC entry - (see [FAQ 5.2](/faq.html#fix_an_entry))
+* Update winning author information - (see [FAQ 5.5](/faq.html#fix_author))
+* Correct a web site problem - (see [FAQ 5.4](/faq.html#fix_web_site) or [FAQ 5.6](/faq.html#fix_link))
 
 Instead of sending us Email, **Please** consider using the [GitHub
 pull request](https://github.com/ioccc-src/winner/pulls) process
@@ -13,9 +13,9 @@ of the [ioccc-src/winner repo](https://github.com/ioccc-src/winner).
 
 If you are trying to:
 
-* Report a bug in an IOCCC winning entry - (see [FAQ 5.1](faq.html#report_bug))
-* Report an IOCCC web site problem - (see [FAQ 5.3](faq.html#report_web_problem))
-* Report a broken or wrong web link - (see [FAQ 5.6](faq.html#fix_link))
+* Report a bug in an IOCCC winning entry - (see [FAQ 5.1](/faq.html#report_bug))
+* Report an IOCCC web site problem - (see [FAQ 5.3](/faq.html#report_web_problem))
+* Report a broken or wrong web link - (see [FAQ 5.6](/faq.html#fix_link))
 
 Instead first look at the [IOCCC
 issues](https://github.com/ioccc-src/winner/issues) to see if the
@@ -39,11 +39,12 @@ posting messages on their platform), preferring to reside in the [fediverse](htt
 There is [help with Mastodon](https://mastodon.help) available for
 those who might wish to [get started with Mastodon](https://fosstodon.org/deck/getting-started).
 
-While there are many fine Mastodon server instances out there, the [IOCCC judges](../judges.html)
+While there are many fine Mastodon server instances out there, the [IOCCC
+judges](/judges.html)
 use [fosstodon.org](https://fosstodon.org/about) where lots of fun folk hang out,
 and topics like science, technology, [free and open source](https://en.wikipedia.org/wiki/Free_and_open-source_software)
 have a good home.  The [fosstodon.oeg](https://fosstodon.org/@fosstodon) folk made the IOCCC feel welcome.
-And while using Mastodon is free, the [IOCCC judges](../judges.html) are pleased to
+And while using Mastodon is free, the [IOCCC judges](/judges.html) are pleased to
 [support the Fosstodon Hub](https://hub.fosstodon.org/support/).
 
 
