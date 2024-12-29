@@ -19,7 +19,7 @@ And the websire to generates:
 
 - [Official IOCCC web site](https://www.ioccc.org)
 
-THank you 🙏
+Thank you 🙏
 
 
 # Great Fork Merge stats
