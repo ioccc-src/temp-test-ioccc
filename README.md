@@ -1,15 +1,17 @@
 # READ-ONLY MODE
 
 As this is the **temp-test-ioccc** repo and the **Great Fork Merge**
-has happened, it is time to retire this repo that as served the
-IOCCC well since it was forked on 2022 Sep 18 17:30 🕠 Pacific time.
+has happened, it is time to retire this repo that has served the
+IOCCC well since it was forked way back on 2022 Sep 18 17:30 🕠 Pacific time.
 
 We plan to, on 2024 Dec 30, archive this repo and make it **Read Only**.
+
 We **THANK** the many people who put **THURSANDS OF HOURS OF HARD WORK** on this repo since
 it was forked back in 2022.
 
-If you are reading this after we have archived this repo and put this repo
-into **Read Only** mode, then we invite you to visit the merge target of this repo:
+If you are reading this after we have archived and put this repo
+into **Read Only** mode, then we invite you to visit the winner repo,
+the merge target of this repo:
 
 - [Official
 IOCCC winner repo](https://github.com/ioccc-src/winner)
