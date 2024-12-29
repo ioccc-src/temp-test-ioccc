@@ -1,3 +1,38 @@
+# READ-ONLY MODE
+
+As this is the **temp-test-ioccc** repo and the **Great Fork Merge**
+has happened, it is time to retire this repo that as served the
+IOCCC well since it was forked on 2022 Sep 18 17:30 🕠 Pacific time.
+
+We plan to, on or about 2024 Dec 29, archive this repo and make it **Read Only**.
+We **THANK** the many who put **HOURS OF HARD WORK** on this repo since
+it was forked.
+
+If you are reading this after we have archived this repo and put it
+into **Read Only** mode we invite you to use instead visit the merge
+target of this repo:
+
+- [Official
+IOCCC winner repo](https://github.com/ioccc-src/winner)
+
+And the websire to generates:
+
+- [Official IOCCC web site](https://www.ioccc.org)
+
+THank you 🙏
+
+
+# Great Fork Merge stats
+
+The **Great Fork Merge** was commit 0b6326676dc0d3c12cf3ba47958244fc34b4f32f
+and took place on 2024 Dec 29.
+
+For details see [GH-commit/0b6326676dc0d3c12cf3ba47958244fc34b4f32f](https://github.com/ioccc-src/temp-test-ioccc/commit/0b6326676dc0d3c12cf3ba47958244fc34b4f32f)
+and the [Pull Request 24 in the winner repo](https://github.com/ioccc-src/winner/commit/0b6326676dc0d3c12cf3ba47958244fc34b4f32f) that it produced.
+
+The **Great Fork Merge** changed 5,157 files with 843,045 additions and 137,758 deletions. ‼️
+
+
 # The International Obfuscated C Code Contest
 
 
