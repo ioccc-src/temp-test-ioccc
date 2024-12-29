@@ -33,6 +33,14 @@ and the [Pull Request 24 in the winner repo](https://github.com/ioccc-src/winner
 The **Great Fork Merge** changed 5,157 files with 843,045 additions and 137,758 deletions. ‼️
 
 
+# Content below is now Obsolete
+
+The rest of this `README.md` file is now obsolete.  The **Great Fork Merge** has occured.
+The new [Official
+IOCCC winner repo](https://github.com/ioccc-src/winner) has already has importand work
+performed on it since the **Great Fork Merge**, making this repo behind by several commits.
+
+
 # The International Obfuscated C Code Contest
 
 
