@@ -28,7 +28,7 @@ The **Great Fork Merge** was commit 0b6326676dc0d3c12cf3ba47958244fc34b4f32f
 and took place on 2024 Dec 29.
 
 For details see [GH-commit/0b6326676dc0d3c12cf3ba47958244fc34b4f32f](https://github.com/ioccc-src/temp-test-ioccc/commit/0b6326676dc0d3c12cf3ba47958244fc34b4f32f)
-and the [Pull Request 24 in the winner repo](https://github.com/ioccc-src/winner/commit/0b6326676dc0d3c12cf3ba47958244fc34b4f32f) that it produced.
+and the [Pull Request 24 in the winner repo](https://github.com/ioccc-src/winner/pull/24) that it produced.
 
 The **Great Fork Merge** changed 5,157 files with 843,045 additions and 137,758 deletions. ‼️
 
