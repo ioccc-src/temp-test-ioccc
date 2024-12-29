@@ -5,7 +5,7 @@ has happened, it is time to retire this repo that as served the
 IOCCC well since it was forked on 2022 Sep 18 17:30 🕠 Pacific time.
 
 We plan to, on or about 2024 Dec 29, archive this repo and make it **Read Only**.
-We **THANK** the many who put **HOURS OF HARD WORK** on this repo since
+We **THANK** the many who put **THURSANDS HOURS OF HARD WORK** on this repo since
 it was forked.
 
 If you are reading this after we have archived this repo and put it
