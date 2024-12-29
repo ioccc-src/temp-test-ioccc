@@ -4,18 +4,17 @@ As this is the **temp-test-ioccc** repo and the **Great Fork Merge**
 has happened, it is time to retire this repo that as served the
 IOCCC well since it was forked on 2022 Sep 18 17:30 🕠 Pacific time.
 
-We plan to, on or about 2024 Dec 29, archive this repo and make it **Read Only**.
+We plan to, on 2024 Dec 30, archive this repo and make it **Read Only**.
 We **THANK** the many who put **THURSANDS OF HOURS OF HARD WORK** on this repo since
 it was forked.
 
-If you are reading this after we have archived this repo and put it
-into **Read Only** mode we invite you to use instead visit the merge
-target of this repo:
+If you are reading this after we have archived this repo and put this repo
+into **Read Only** mode, then we invite you to visit the merge target of this repo:
 
 - [Official
 IOCCC winner repo](https://github.com/ioccc-src/winner)
 
-And the websire to generates:
+And to visit the website the winner repo to generates:
 
 - [Official IOCCC web site](https://www.ioccc.org)
 
@@ -38,7 +37,7 @@ The **Great Fork Merge** changed 5,157 files with 843,045 additions and 137,758 
 The rest of this `README.md` file is now obsolete.  The **Great Fork Merge** has occured.
 The new [Official
 IOCCC winner repo](https://github.com/ioccc-src/winner) has already has importand work
-performed on it since the **Great Fork Merge**, making this repo behind by several commits.
+performed on it since the **Great Fork Merge**, making this repo behind by several important commits.
 
 
 # The International Obfuscated C Code Contest
