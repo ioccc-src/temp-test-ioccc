@@ -1,12 +1,12 @@
 # READ-ONLY MODE
 
 As this is the **temp-test-ioccc** repo and the **Great Fork Merge**
-has happened, it is time to retire this repo that has served the
-IOCCC well since it was forked way back on 2022 Sep 18 17:30 🕠 Pacific time.
+has already happened, it is time to retire this repo that has served the
+[IOCCC](https://www.ioccc.org) well since it was forked way back on 2022 Sep 18 17:30 🕠 Pacific time.
 
 We plan to, on 2024 Dec 30, archive this repo and make it **Read Only**.
 
-We **THANK** the many people who put **THURSANDS OF HOURS OF HARD WORK** on this repo since
+We **THANK** the many people who put **THOUSANDS OF HOURS OF HARD WORK** in this repo since
 it was forked back in 2022.
 
 If you are reading this after we have archived and put this repo
@@ -16,7 +16,7 @@ the merge target of this repo:
 - [Official
 IOCCC winner repo](https://github.com/ioccc-src/winner)
 
-And to visit the website the winner repo to generates:
+And to visit the website the winner repo generates:
 
 - [Official IOCCC web site](https://www.ioccc.org)
 
@@ -26,45 +26,51 @@ Thank you 🙏
 # Great Fork Merge stats
 
 The **Great Fork Merge** was commit 0b6326676dc0d3c12cf3ba47958244fc34b4f32f
-and took place on 2024 Dec 29.
+and took place on 2024 Dec 29, a total span of **833 days** ‼️
 
 For details see [GH-commit/0b6326676dc0d3c12cf3ba47958244fc34b4f32f](https://github.com/ioccc-src/temp-test-ioccc/commit/0b6326676dc0d3c12cf3ba47958244fc34b4f32f)
 and the [Pull Request 24 in the winner repo](https://github.com/ioccc-src/winner/pull/24) that it produced.
 
-The **Great Fork Merge** changed 5,157 files with 843,045 additions and 137,758 deletions. ‼️
+The **Great Fork Merge** _changed 5,157 files_ with _843,045 additions_ and _137,758
+deletions_, in _6,169 commits_ ‼️
 
 
 # Content below is now Obsolete
 
-The rest of this `README.md` file is now obsolete.  The **Great Fork Merge** has occured.
-The new [Official
-IOCCC winner repo](https://github.com/ioccc-src/winner) has already has importand work
-performed on it since the **Great Fork Merge**, making this repo behind by several important commits.
+The rest of this `README.md` file is now obsolete.  The **Great Fork Merge** has
+occurred.  The new [Official IOCCC winner
+repo](https://github.com/ioccc-src/winner) has already had important work
+performed on it since the **Great Fork Merge**, making this repo behind by
+several important commits.
 
 
 # The International Obfuscated C Code Contest
 
-
-## **Obfuscate** | *verb* [with object]
-
-- render obscure, unclear, or unintelligible: the spelling changes will deform
+> **Obfuscate** | _verb_ [with object]
+>
+> render obscure, unclear, or unintelligible: the spelling changes will deform
 some familiar words and obfuscate their etymological origins.
+>
+>    - bewilder (someone): it is more likely to obfuscate people than enlighten them.
+>
+>    **obfuscatory** | _adjective_
+>
+>   **ORIGIN**
+>
+>   late Middle English (as adjective): from late Latin **obfuscat-**
+>   'darkened', from the verb **obfuscare**, based on Latin **fuscus** 'dark'.
 
-    - bewilder (someone): it is more likely to obfuscate people than enlighten them.
-obfuscatory | adjective
 
-    late Middle English (as adjective): from late Latin **obfuscat-**
-    'darkened', from the verb **obfuscare**, based on Latin **fuscus** 'dark'.
-
-
-## **Obfuscation** | *noun*
-
-- the action of making something obscure, unclear, or unintelligible: when
+> **Obfuscation** | _noun_
+>
+> the action of making something obscure, unclear, or unintelligible: when
 confronted with sharp questions they resort to obfuscation | ministers put up
 mealy-mouthed denials and obfuscations.
-
-    late Middle English: from late Latin **obfuscatio(n-)**, from **obfuscare**
-    'to darken or obscure' (see *obfuscate*).
+>
+>   **ORIGIN**
+>
+>    late Middle English: from late Latin **obfuscatio(n-)**, from **obfuscare**
+>    'to darken or obscure' (see *obfuscate*).
 
 The official IOCCC website is [www.ioccc.org](https://www.ioccc.org).
 
